@@ -1,2 +1,3 @@
-# docker-sshd
-SSHD in Docker
+# SSH Daemon in Docker
+Available in Ubuntu only.
+
