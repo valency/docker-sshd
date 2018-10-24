@@ -21,7 +21,7 @@ docker run -dti -p 22 ubuntu-sshd:18.04
 
 ### CentOS
 
-CentOS SSHD is based on 7.
+CentOS SSHD is based on 7. This version of CentOS does not support `systemctl`.
 
 Build:
 
@@ -33,7 +33,7 @@ docker build . --tag centos-sshd:7
 Run:
 
 ```bash
-docker run -dti -p 22 -v /sys/fs/cgroup:/sys/fs/cgroup:ro centos-sshd:7
+docker run -dti -p 22 --privileged --cap-add=SYS_ADMIN -v /sys/fs/cgroup:/sys/fs/cgroup:ro centos-sshd:7
 ```
 
 ## Usage
