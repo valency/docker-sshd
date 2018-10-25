@@ -25,7 +25,7 @@ CentOS SSHD is based on 7. This version of CentOS does not support `systemctl`.
 
 Build:
 
-```
+```bash
 cd CentOS
 docker build . --tag centos-sshd:7
 ```
