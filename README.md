@@ -16,7 +16,7 @@ docker build . --tag ubuntu-sshd:18.04
 Run:
 
 ```bash
-docker run -dti -p 22 ubuntu-sshd:18.04
+docker run -dti --privileged -p 22 ubuntu-sshd:18.04
 ```
 
 ### CentOS
@@ -33,7 +33,7 @@ docker build . --tag centos-sshd:7
 Run:
 
 ```bash
-docker run -dti -p 22 --privileged --cap-add=SYS_ADMIN -v /sys/fs/cgroup:/sys/fs/cgroup:ro centos-sshd:7
+docker run -dti --privileged -p 22 --cap-add=SYS_ADMIN -v /sys/fs/cgroup:/sys/fs/cgroup:ro centos-sshd:7
 ```
 
 ## Usage
