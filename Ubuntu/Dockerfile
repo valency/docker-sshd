@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 MAINTAINER Ye Ding "https://github.com/valency/docker-sshd"
 
-RUN sed -i -e 's/archive/cn.archive/g' /etc/apt/sources.list
+RUN sed -i -e 's/\(archive\|security\).ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 RUN apt-get update && apt-get install -y openssh-server sudo
 RUN mkdir /var/run/sshd
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
