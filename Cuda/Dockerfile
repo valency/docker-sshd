@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-base
+FROM nvidia/cuda:10.2-base
 MAINTAINER Ye Ding "https://github.com/valency/docker-sshd"
 
 RUN sed -i -e 's/archive/cn.archive/g' /etc/apt/sources.list
