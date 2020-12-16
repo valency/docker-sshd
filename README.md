@@ -44,3 +44,11 @@ ssh -p <port> admin@localhost
 
 The default password is `screencast`.
 
+
+
+## Cuda
+
+```shell
+docker run --rm --gpus 'all,"capabilities=compute,utility"' nvidia/cuda:11.0-base nvidia-smi
+```
+
