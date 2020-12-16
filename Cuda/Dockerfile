@@ -1,8 +1,11 @@
-FROM nvidia/cuda:10.1-devel-ubuntu18.04
+FROM nvidia/cuda:11.1-devel-ubuntu20.04
 MAINTAINER Ye Ding "https://github.com/valency/docker-sshd"
 
-RUN sed -i -e 's/archive/cn.archive/g' /etc/apt/sources.list
-RUN apt-get update && apt-get install -y openssh-server sudo
+RUN sed -i -e 's/\(archive\|security\).ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+ENV TZ=Asia/Hong_Kong
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt-get update; exit 0
+RUN apt-get install -y openssh-server sudo
 RUN mkdir /var/run/sshd
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
