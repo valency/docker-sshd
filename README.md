@@ -4,36 +4,19 @@
 
 ### Ubuntu
 
-Ubuntu SSHD is based on 20.04.
+Ubuntu SSHD is based on 22.04.
 
 Build:
 
 ```bash
 cd Ubuntu
-docker build . --tag ubuntu-sshd:20.04
+docker build . --tag ubuntu-sshd:22.04
 ```
 
 Run:
 
 ```bash
-docker run -dti --privileged -p 22 ubuntu-sshd:18.04
-```
-
-### CentOS
-
-CentOS SSHD is based on 7. This version of CentOS does not support `systemctl`.
-
-Build:
-
-```bash
-cd CentOS
-docker build . --tag centos-sshd:7
-```
-
-Run:
-
-```bash
-docker run -dti --privileged -p 22 --cap-add=SYS_ADMIN -v /sys/fs/cgroup:/sys/fs/cgroup:ro centos-sshd:7
+docker run -dti --privileged -p 22 ubuntu-sshd:22.04
 ```
 
 ### Cuda
