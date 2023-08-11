@@ -73,7 +73,9 @@ docker run -dti --privileged -p 80 --gpus '"device=all"' cuda-wetty:12.2.0
 
 Usage:
 
+```plain
 http://localhost:<port>/wetty
+```
 
 The default user and password are `admin` and `cephalon`.
 
