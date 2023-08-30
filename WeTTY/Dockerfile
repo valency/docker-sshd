@@ -1,5 +1,4 @@
 FROM nvidia/cuda:12.2.0-devel-ubuntu22.04
-MAINTAINER Ye Ding "https://github.com/valency/docker-sshd"
 
 RUN sed -i -e 's/\(archive\|security\).ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 ENV TZ=Asia/Hong_Kong
