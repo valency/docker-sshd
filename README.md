@@ -57,7 +57,7 @@ The default password is `screencast`.
 
 https://hub.docker.com/repository/docker/uiewy/cuda-wetty
 
-CUDA WeTTY is based on [nvidia/cuda:12.2.0-devel-ubuntu22.04](https://hub.docker.com/r/nvidia/cuda) and [butlerx/wetty](https://github.com/butlerx/wetty).
+CUDA WeTTY is based on [nvidia/cuda:12.2.0-devel-ubuntu22.04](https://hub.docker.com/r/nvidia/cuda) and [butlerx/wetty](https://github.com/butlerx/wetty) with [NGINX](https://nginx.org/) enabled.
 
 Build:
 
@@ -74,8 +74,9 @@ docker run -dti --privileged -p 80 --gpus '"device=all"' cuda-wetty:12.2.0
 Usage:
 
 ```plain
+http://localhost:<port>/
 http://localhost:<port>/wetty
 ```
 
-The default user and password are `admin` and `cephalon`.
+The default user and password of WeTTY are `admin` and `cephalon`.
 
