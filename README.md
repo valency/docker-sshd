@@ -4,19 +4,19 @@
 
 https://hub.docker.com/repository/docker/uiewy/ubuntu-sshd
 
-Ubuntu SSHD is based on 22.04.
+Ubuntu SSHD is based on 24.04.
 
 Build:
 
 ```bash
 cd Ubuntu
-docker build . --tag ubuntu-sshd:22.04
+docker build . --tag ubuntu-sshd:24.04
 ```
 
 Run:
 
 ```bash
-docker run -dti --privileged -p 22 ubuntu-sshd:22.04
+docker run -dti --privileged -p 22 ubuntu-sshd:24.04
 ```
 
 Usage:
