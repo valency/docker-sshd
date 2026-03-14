@@ -31,18 +31,18 @@ The default password is `screencast`.
 
 https://hub.docker.com/repository/docker/uiewy/cuda-sshd
 
-CUDA SSHD is based on [nvidia/cuda:12.2.0-devel-ubuntu22.04](https://hub.docker.com/r/nvidia/cuda).
+CUDA SSHD is based on [nvidia/13.1.1-cudnn-devel-ubuntu24.04](https://hub.docker.com/r/nvidia/cuda).
 
 Build:
 
 ```shell
 cd CUDA
-docker build . --tag cuda-sshd:12.2.0
+docker build . --tag cuda-sshd:13.1.1
 ```
 
 Run:
 ```shell
-docker run -dti --privileged -p 22 --gpus '"device=all"' cuda-sshd:12.2.0
+docker run -dti --privileged -p 22 --gpus '"device=all"' cuda-sshd:13.1.1
 ```
 
 Usage:
